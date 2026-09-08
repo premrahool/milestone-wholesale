@@ -1,0 +1,256 @@
+
+/* =========================================================
+   Milestone Trading Co. — wholesale landing page
+   Palette extracted from the Milestone Agarbatti logo &
+   product packaging: temple gold, deep leaf green, cream,
+   near-black ink.
+   ========================================================= */
+:root{
+  --gold:#c08a12;
+  --gold-600:#a5750c;
+  --gold-200:#f0d79a;
+  --gold-050:#fdf6e6;
+  --green:#1d6b3f;
+  --green-800:#123f26;
+  --cream:#fbf5e7;
+  --ink:#17140e;
+  --ink-700:#443f33;
+  --ink-400:#7b7466;
+  --line:#e7e0cf;
+  --radius:14px;
+  --shadow-sm:0 2px 10px rgba(23,20,14,.07);
+  --shadow-md:0 14px 34px rgba(23,20,14,.12);
+}
+
+*{ text-wrap:pretty; }
+body{
+  font-family:"Karla",system-ui,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,h5,h6,.brand-text{ font-family:"Bitter",Georgia,serif; font-weight:700; letter-spacing:-.01em; }
+a{ color:var(--green); text-decoration:none; }
+a:hover{ color:var(--gold-600); }
+img{ max-width:100%; }
+.section{ padding:84px 0; }
+.section-cream{ background:var(--cream); }
+.section-dark{ background:var(--green-800); color:#fff; }
+.section-dark h2,.section-dark h5{ color:#fff; }
+
+/* ---------- buttons ---------- */
+.btn{ font-weight:600; border-radius:10px; }
+.btn-brand{
+  background:linear-gradient(180deg,var(--gold) 0%,var(--gold-600) 100%);
+  border:1px solid var(--gold-600); color:#fff;
+}
+.btn-brand:hover,.btn-brand:focus{ background:var(--gold-600); border-color:var(--gold-600); color:#fff; }
+.btn-ink{ background:var(--ink); border:1px solid var(--ink); color:#fff; }
+.btn-ink:hover{ background:#000; color:#fff; }
+.btn-outline-ink{ border:1.5px solid var(--ink); color:var(--ink); background:transparent; }
+.btn-outline-ink:hover{ background:var(--ink); color:#fff; }
+.btn-lg{ padding:.8rem 1.4rem; }
+
+/* ---------- top bar + nav ---------- */
+.topbar{
+  background:var(--ink); color:#e9e3d3; font-size:.86rem; padding:9px 0;
+}
+.topbar a{ color:#e9e3d3; }
+.topbar a:hover{ color:var(--gold-200); }
+.topbar i{ color:var(--gold-200); margin-right:4px; }
+
+.site-nav{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--line);
+  padding:10px 0;
+  transition:box-shadow .25s ease, padding .25s ease;
+}
+.site-nav.is-stuck{ box-shadow:var(--shadow-sm); padding:6px 0; }
+.brand-mark{
+  width:44px; height:44px; object-fit:cover; border-radius:9px;
+  border:1px solid var(--line);
+}
+.brand-text{ display:flex; flex-direction:column; line-height:1.05; font-size:1.18rem; color:var(--ink); }
+.brand-text small{ font-family:"Karla",sans-serif; font-weight:600; font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-600); }
+.brand-text-light{ color:#fff; }
+.brand-text-light small{ color:var(--gold-200); }
+.site-nav .nav-link{ font-weight:600; color:var(--ink-700); padding:.5rem .85rem; }
+.site-nav .nav-link:hover,.site-nav .nav-link.active{ color:var(--gold-600); }
+.navbar-toggler{ border-color:var(--line); }
+.navbar-toggler:focus{ box-shadow:none; }
+
+/* ---------- hero ---------- */
+.eyebrow{
+  display:inline-flex; align-items:center; gap:7px;
+  font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold-600); background:var(--gold-050);
+  border:1px solid var(--gold-200); border-radius:999px; padding:6px 14px; margin-bottom:18px;
+}
+.eyebrow-dark{ color:var(--green); background:#f2f7f3; border-color:#cfe2d6; }
+.eyebrow-gold{ color:var(--gold-200); background:rgba(240,215,154,.12); border-color:rgba(240,215,154,.35); }
+
+.hero{
+  position:relative; padding:72px 0 84px;
+  background:
+    radial-gradient(1100px 460px at 88% 8%, rgba(192,138,18,.16), transparent 65%),
+    radial-gradient(760px 420px at 4% 92%, rgba(29,107,63,.12), transparent 62%),
+    var(--cream);
+  border-bottom:1px solid var(--line);
+}
+.hero-title{ font-size:clamp(2.05rem,4.4vw,3.35rem); line-height:1.08; margin-bottom:18px; }
+.hero-sub{ font-size:1.09rem; color:var(--ink-700); max-width:36em; margin-bottom:28px; }
+.hero-stats{ display:flex; flex-wrap:wrap; gap:14px 40px; margin-top:36px; }
+.hero-stats strong{ font-family:"Bitter",serif; font-size:2rem; display:block; color:var(--green); line-height:1; }
+.hero-stats strong::after{ content:"+"; color:var(--gold); }
+.hero-stats span{ font-size:.82rem; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-400); }
+
+.hero-collage{ display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:132px; gap:14px; }
+.hc{ margin:0; overflow:hidden; border-radius:var(--radius); box-shadow:var(--shadow-md); background:#fff; }
+.hc img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+.hc:hover img{ transform:scale(1.05); }
+.hc-lg{ grid-row:span 2; }
+
+/* ---------- trust strip ---------- */
+.trust-strip{ background:#fff; border-bottom:1px solid var(--line); padding:34px 0; }
+.trust-strip i{ font-size:1.5rem; color:var(--gold); display:block; margin-bottom:8px; }
+.trust-strip h6{ font-size:1rem; margin-bottom:2px; }
+.trust-strip p{ font-size:.88rem; color:var(--ink-400); margin:0; }
+
+/* ---------- section head ---------- */
+.sec-head{ max-width:44em; margin-bottom:36px; }
+.sec-head h2{ font-size:clamp(1.7rem,2.9vw,2.4rem); margin-bottom:10px; }
+.sec-head p{ color:var(--ink-400); margin:0; font-size:1.02rem; }
+
+/* ---------- filter bar ---------- */
+.filter-bar{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:32px; }
+.filter-btn{
+  border:1.5px solid var(--line); background:#fff; color:var(--ink-700);
+  font-weight:600; font-size:.92rem; padding:.55rem 1.05rem; border-radius:999px;
+  transition:all .2s ease;
+}
+.filter-btn:hover{ border-color:var(--gold); color:var(--gold-600); }
+.filter-btn.active{ background:var(--ink); border-color:var(--ink); color:#fff; }
+.filter-btn .count{ font-size:.78rem; opacity:.6; margin-left:4px; }
+
+/* ---------- product cards ---------- */
+.product-item.is-hidden{ display:none; }
+.p-card{
+  height:100%; display:flex; flex-direction:column; background:#fff;
+  border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.p-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--gold-200); }
+.p-card-feature{ border-color:var(--gold); box-shadow:0 0 0 3px var(--gold-050); }
+.p-media{ position:relative; aspect-ratio:4/3; background:var(--cream); overflow:hidden; }
+.p-media img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+.p-card:hover .p-media img{ transform:scale(1.06); }
+.p-tag{
+  position:absolute; top:10px; left:10px; background:rgba(23,20,14,.88); color:#fff;
+  font-size:.7rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  padding:5px 10px; border-radius:6px;
+}
+.p-tag-gold{ background:var(--gold-600); }
+.p-body{ padding:18px; display:flex; flex-direction:column; flex:1; }
+.p-body h3{ font-size:1.06rem; margin-bottom:7px; }
+.p-body p{ font-size:.92rem; color:var(--ink-700); margin-bottom:12px; }
+.p-specs{ list-style:none; padding:0; margin:0 0 16px; font-size:.83rem; color:var(--ink-400); }
+.p-specs li{ position:relative; padding-left:16px; margin-bottom:3px; }
+.p-specs li::before{ content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--gold); }
+.btn-quote{
+  margin-top:auto; align-self:flex-start; background:transparent; border:1.5px solid var(--ink);
+  color:var(--ink); font-size:.88rem; padding:.45rem 1rem;
+}
+.btn-quote:hover{ background:var(--ink); color:#fff; }
+.btn-quote i{ transition:transform .2s ease; }
+.btn-quote:hover i{ transform:translateX(3px); }
+.empty-note{ margin-top:28px; color:var(--ink-400); }
+
+/* ---------- agarbatti highlight ---------- */
+.lead-muted{ color:#d6e2d9; font-size:1.06rem; }
+.brand-chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.brand-chips span{
+  border:1px solid rgba(240,215,154,.35); color:#f3ecd9; border-radius:999px;
+  padding:6px 13px; font-size:.85rem; font-weight:600;
+}
+.brand-chips .more{ background:var(--gold-600); border-color:var(--gold-600); color:#fff; }
+.tile{ width:100%; height:190px; object-fit:cover; border-radius:var(--radius); box-shadow:var(--shadow-md); }
+.tile-tall{ height:396px; }
+
+/* ---------- makhana grades ---------- */
+.grade-card{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+  padding:26px 24px; height:100%;
+}
+.grade-card .grade{
+  display:inline-block; font-family:"Bitter",serif; font-weight:800; font-size:1.5rem;
+  color:var(--gold-600); margin-bottom:8px;
+}
+.grade-card h5{ font-size:1.05rem; margin-bottom:6px; }
+.grade-card p{ font-size:.93rem; color:var(--ink-400); margin:0; }
+.grade-card-top{ border-color:var(--gold); background:var(--gold-050); }
+
+/* ---------- why us ---------- */
+.text-muted-ink{ color:var(--ink-400); }
+.why-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px; height:100%; }
+.why-card i{ font-size:1.4rem; color:var(--green); }
+.why-card h6{ margin:10px 0 5px; font-size:1rem; }
+.why-card p{ font-size:.9rem; color:var(--ink-400); margin:0; }
+
+/* ---------- cta band ---------- */
+.cta-band{ background:linear-gradient(100deg,var(--gold) 0%,var(--gold-600) 100%); color:#fff; padding:44px 0; }
+.cta-band h3{ font-size:1.55rem; margin-bottom:4px; }
+.cta-band p{ margin:0; color:rgba(255,255,255,.9); }
+
+/* ---------- footer ---------- */
+.site-footer{ background:var(--ink); color:#cdc6b6; padding:60px 0 26px; font-size:.94rem; }
+.site-footer h6{ color:#fff; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:14px; font-family:"Karla",sans-serif; font-weight:700; }
+.site-footer ul{ list-style:none; padding:0; margin:0; }
+.site-footer li{ margin-bottom:8px; }
+.site-footer a{ color:#cdc6b6; }
+.site-footer a:hover{ color:var(--gold-200); }
+.contact-list i{ color:var(--gold-200); width:20px; }
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.12); margin-top:40px; padding-top:18px;
+  display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between;
+  font-size:.85rem; color:#8f887a;
+}
+
+/* ---------- whatsapp float ---------- */
+.wa-float{
+  position:fixed; right:18px; bottom:18px; z-index:1030;
+  width:54px; height:54px; border-radius:50%;
+  background:#1faa54; color:#fff; display:grid; place-items:center;
+  font-size:1.6rem; box-shadow:0 10px 24px rgba(31,170,84,.4);
+}
+.wa-float:hover{ color:#fff; transform:translateY(-2px); }
+
+/* ---------- modal ---------- */
+.inquiry-modal{ border:none; border-radius:var(--radius); overflow:hidden; }
+.inquiry-modal .modal-header{ background:var(--cream); border-bottom:1px solid var(--line); align-items:flex-start; }
+.inquiry-modal .modal-title{ font-size:1.25rem; }
+.modal-note{ font-size:.85rem; color:var(--ink-400); }
+.inquiry-modal .modal-body{ padding:24px; }
+.form-label{ font-weight:600; font-size:.86rem; color:var(--ink-700); }
+.form-control,.form-select{ border-color:var(--line); padding:.6rem .8rem; }
+.form-control:focus,.form-select:focus{ border-color:var(--gold); box-shadow:0 0 0 3px var(--gold-050); }
+
+/* ---------- responsive ---------- */
+@media (max-width:991.98px){
+  .section{ padding:64px 0; }
+  .hero{ padding:52px 0 64px; }
+  .tile-tall{ height:190px; }
+  .site-nav .nav-link{ padding:.6rem .2rem; }
+  .site-nav .btn{ width:100%; margin-top:10px; }
+}
+@media (max-width:575.98px){
+  .hero-collage{ grid-auto-rows:104px; gap:10px; }
+  .hero-stats{ gap:12px 26px; }
+  .hero-stats strong{ font-size:1.6rem; }
+  .cta-band h3{ font-size:1.3rem; }
+  .filter-bar{ gap:8px; }
+  .filter-btn{ font-size:.85rem; padding:.45rem .85rem; }
+}
+@media (prefers-reduced-motion:reduce){
+  *{ transition:none !important; animation:none !important; }
+}
